@@ -14,7 +14,7 @@ public class RegisterAccountTest extends BaseTest {
                 .clickForRegisterOnAccountPage()
                 .enterFirstName("Olesia")
                 .enterLastNameField("Stets")
-                .enterEmailField("hd777@gmail.com")
+                .enterEmailField("hd054247@gmail.com")
                 .enterTelephone("0976655145")
                 .enterPassword("13Ofg4")
                 .enterPasswordConfirm("13Ofg4")

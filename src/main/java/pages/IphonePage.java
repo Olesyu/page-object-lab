@@ -3,6 +3,7 @@ package pages;
 import org.asynchttpclient.util.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class IphonePage extends MainPage {
 
@@ -17,6 +18,7 @@ public class IphonePage extends MainPage {
 
 
     public IphonePage comparePriceForIphone(String priceIphone) {
+        getWaiter().until(ExpectedConditions.visibilityOfElementLocated(priceForIphone));
         if (getDriver().findElement(priceForIphone).getText().equals(priceIphone)) {
             return this;
         }

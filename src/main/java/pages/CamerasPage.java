@@ -17,34 +17,33 @@ public class CamerasPage extends MainPage {
     //  return cameras.findElements(camera).size() == numberOfItems;  } /Варіант з лишньою змінною
 
     public CamerasPage numberOfCamerasOnPage(int numberOfItems) {
-        int sss=getDriver().findElement(camerasContainer).findElements(camera).size();
-        if(getDriver().findElement(camerasContainer).findElements(camera).size() == numberOfItems ) {
-          return this;
-       }
+        if (getDriver().findElement(camerasContainer).findElements(camera).size() == numberOfItems) {
+            return this;
+        }
         return null;
     }
 
-        public CamerasPage compareOldPriceForCanonEOS5D (String oldPrice){
-            if (getDriver().findElement(oldPriceForCanonEOS5D).getText().equals(oldPrice)) {
-                return this;
-            }
-            return null;
+    public CamerasPage compareOldPriceForCanonEOS5D(String oldPrice) {
+        if (getDriver().findElement(oldPriceForCanonEOS5D).getText().equals(oldPrice)) {
+            return this;
         }
-
-
-        public CamerasPage compareExTaxForNikonD300 (String exTax){
-            if (getDriver().findElement(exTaxForNikonD300).getText().equals("Ex Tax: " + exTax)) {
-                return this;
-            }
-            return null;
-        }
-
-        public CamerasPage compareNewPriceForCanonEOS5D (String newPrice){
-            if (getDriver().findElement(newPriceForCanonEOS5D).getText().equals(newPrice)) {
-                return this;
-            }
-            return null;
-        }
-
+        return null;
     }
+
+
+    public CamerasPage compareExTaxForNikonD300(String exTax) {
+        if (getDriver().findElement(exTaxForNikonD300).getText().equals("Ex Tax: " + exTax)) {
+            return this;
+        }
+        return null;
+    }
+
+    public CamerasPage compareNewPriceForCanonEOS5D(String newPrice) {
+        if (getDriver().findElement(newPriceForCanonEOS5D).getText().equals(newPrice)) {
+            return this;
+        }
+        return null;
+    }
+
+}
 
